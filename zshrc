@@ -20,7 +20,6 @@ ZSH_THEME="miloshadzic"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll='ls -al'
 
 # Set this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -88,3 +87,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Personal aliases
+alias ll='ls -al'
