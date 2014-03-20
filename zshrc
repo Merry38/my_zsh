@@ -58,12 +58,12 @@ ZSH_THEME="miloshadzic"
 # plugins=(git)
 plugins=(git zsh-syntax-highlighting);
 case $OSTYPE in
-  darwin*)
-    plugins+=(osx macports terminalapp cloudapp);
-    ;;
-  linux*)
-    plugins+=(debian);
-    ;;
+	darwin*)
+		plugins+=(osx macports terminalapp cloudapp);
+		;;
+	linux*)
+		plugins+=(debian);
+		;;
 esac
 # vi-mode removed because it disables shift-tab
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
@@ -87,6 +87,22 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Extended Move Command
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
+# List directory contents after a 'cd'
+# (Only if the output will be less then 20 lines long)
+function chpwd()
+{
+	emulate -LR zsh
+
+	if [[ `ls -AC | wc -l` -le 20 ]]
+	then
+		ls -A
+	fi
+}
 
 # Personal aliases
 alias ll='ls -al'
