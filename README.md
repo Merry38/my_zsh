@@ -3,4 +3,4 @@ my_zsh
 
 ZSH config
 
-NOTE clone in ~/.zsh, link zshrc to ~/.zshrc and clone ohmyzsh folderfrom robby
+Remember to *git submodule init* and *git submodule update*
